@@ -9,9 +9,8 @@
   ================================================== -->
 	<meta charset="utf-8">
 	<title>Fave your MP :)</title>
-	<meta name="description" content="Google HackApp">
-	<meta name="author" content="Sahil, Saransh and Akash">
-	<meta http-equiv="refresh" content="5">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
 	<!-- Mobile Specific Metas
   ================================================== -->
@@ -19,7 +18,10 @@
 
 	<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -31,7 +33,7 @@
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-
+	<script src="js/index.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -39,21 +41,69 @@
 
 	<!-- Primary Page Layout
 	================================================== -->
+
+	<!-- Delete everything in this .container and get started on your own site! -->
+	<div class="distance"></div>
 	<div class="container">
-		<img src="images/placeholder.png" alt="MP's Photograph" class="photo clearfix">
-		<div class="separator"></div> <!--Stylistic only -->
-		<div class="primaryData clearfix">
+		<div class="boundary clearfix content">
+			
+			<img src="images/placeholder.png" alt="MP's Photograph" id="photograph" class="clearfix">
+			
+			<div id="separator" class="clearfix"></div>				
+			
+			<div class="indicator clearfix"></div>
+			
+			<div class="Primary clearfix">Insert most relevant data here.</div>
+			
+			<div class="Secondary clearfix">
+					<p>Insert php generated content here.</p>
+			</div>
 			<ul>
-				<li>Name :</li>
-				<li>Constituency :</li>
-				<li>State of Election :</li>
+				<li>
+						<!--
+						<?php
+						function ul_li_tree($JSON_Dump_from_DataWeave)
+						{
+							$out= '<ul>';
+							foreach ($JSON_Dump_from_DataWeave as $key => $value)
+							{
+								$out.= '<li>';
+								if (is_array($value)){
+									$out.= $key . ul_li_tree($value);
+								}
+								else{
+									$out.= $value;
+								}
+								$out.= '</li>';
+							}
+							$out.= '</ul>';
+							return $out;
+						}
+						/*		
+						OR, Change the following into a list :)
+						Use the 'Keys' only.
+
+						"State": "Andhra Pradesh",
+			            "MP_Name": "Rathod Ramesh",
+			            "District": "ADILABAD (ST)",
+			            "Entitlement_of_Constituency": "9",
+			            "Released_by_government_of_India": "6.5",
+			            "Amount_available_with_interest": "6.54",
+			            "Amount_recommended": "4.05",
+			            "Amount_sanctioned": "4.05",
+			            "Expenditure_incurred": "3.33",
+			            "Percent_of_utilisation_over_released": "51.23",
+			            "Unspent_balance": "3.21",
+			            "Currency": "INR",
+			            "Units": "Crore"
+			            */
+	            		?>
+	           	-->
+				</li>
 			</ul>
 		</div>
-		<div class="secondaryData clearfix"></div>
-		<div class="indicator clearfix"></div>
-		<div class="voteWidget clearfix"></div>
-	</div>
-<!-- container -->
+		</div>
+	</div><!-- container -->
 
 
 <!-- End Document

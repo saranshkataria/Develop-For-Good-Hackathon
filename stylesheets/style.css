@@ -1,61 +1,55 @@
 .container{
+	border-radius: 25px;
+}
+.boundary{
 	position: relative;
-	margin-top: 6%;
-	margin-left: 20%;
-	border-radius: 0.6em;
 	background-color: #eee;
-	height: 45em;
-	width: 40em;
-	max-width: 50em;
-	max-height: 55em;
+	min-width: 480px;
+	max-width: 900px;
+	border: 1px solid;
+	border-color: green;
+	border-radius: 15px;
+	clear: both;
+	overflow: hidden;
 }
-.photo{
-	position: absolute;
-	top: 2%; left: -2.5%;
-	margin-top: 2.5%;
-	border: 1px dotted #efefef;
-	border-radius: 0.3em;
-	width: 160px; height: 180px;
-	max-width: 30%;
-	max-height: 35%;
+
+#photograph{
+	position:relative;
+	float: left;
+	width: 160px;	min-width:160px;	max-width:360px;
+	height: 210px;	min-height:210px;	max-height:480px;
+	margin-left: 5px;
+	margin-top: 8px;	
+	border-radius: 3px;
 }
-.separator{
-	position: absolute;
-	top: 2.5%;
-	left: 26%;
-	border: 0.03em solid #aaa;
-	height: 30%;
-	border-radius: 0.1em;
+#separator{
+	position: relative;
+	float: left;	
+	width: 1px;
+	height: 224px;
+	margin-top: 2px;
+	margin-left: 4px;
+	background-color: grey;
+	border-radius: 1px;
 }
-.primaryData{
-	position: absolute;
-	top: 3.5%; left: 28%;
-	display: block;
+.Primary{
+	float: left;
 }
-.primarydataul{
-	list-style-type: none;
-}
-.secondaryData{
-	position: absolute;
-	display: block;
-	height: 65%;
-	width: 91.5%;
-	top: 35%;
-	left: 0.1%;
-	border-top: darkblue;
-	border-bottom-left-radius: 0.6em;
-	background-color: blue;
+.Secondary{
+	float: left;
 }
 .indicator{
-	position: absolute;
-	right: 0.1%;
-	height: 100%;
-	width: 8%;
-	border-top-right-radius: 0.6em;
-	border-bottom-right-radius: 0.6em;
-	border-left: 1px solid yellow;
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+	float: right;
 	display: block;
-	background: #0e501c; /* Old browsers */
+	min-height: 240px;
+	width: 60px;	
+	background:green;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background: #0e501c; /* Old browsers */
 	background: -moz-linear-gradient(top,  #0e501c 0%, #6a9b15 50%, #d2350a 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0e501c), color-stop(52%,#6a9b15), color-stop(100%,#d2350a)); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top,  #0e501c 0%,#6a9b15 52%,#d2350a 100%); /* Chrome10+,Safari5.1+ */
@@ -63,4 +57,44 @@
 	background: -ms-linear-gradient(top,  #0e501c 0%,#6a9b15 52%,#d2350a 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #0e501c 0%,#6a9b15 52%,#d2350a 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e501c', endColorstr='#d2350a',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+body {
+	text-align: center;   /* horizontal centering hack for IE */
+	padding: 0;           /* required to "hide" distance div */
+	margin: 0;            /* required to "hide" distance div */
+}
+div.distance { 
+	margin-bottom: -10em; /* half of content height */
+	background: red;      /* temporary - used to see div */
+	width: 1px;           /* required to "hide" distance div */
+	height: 50%;          /* required */
+	float: left;          /* required */
+
+}
+div.content {
+	position: relative;   /* positions content on top of distance */
+	text-align: left;     /* horizontal centering hack for IE */
+	/*height: 20em;         /* required - desired height */
+	width: 40em;          /* required - desired width */
+	/*background: blue;     /* cosmetic */
+	margin: 0 auto;       /* required */
+	clear: left;          /* required */
 }
